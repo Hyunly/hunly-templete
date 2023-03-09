@@ -1,5 +1,40 @@
 const path = require('path')
 
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+
 module.exports = {
-    enter: "./src/main.ts"
+    // 打包入口文件
+    entry: "./src/main.js",
+
+    // 打包出口
+    output: {
+        path: path.resolve(__dirname, 'dist'),  // 打包到目的文件夹
+        filename:'bunld.js'     // 打包后的js文件名
+    },
+    module: {
+        rules: [
+            {
+                test: /\.ts?$/,
+                loader: 'ts-loader',
+                options: {
+                    appendTsSuffixTo: [/\.vue$/]
+                }
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader',
+            },
+            {
+                test: /\.less$/,
+                use:["style-loader","css-loader","less-loader"],
+            }
+        ]
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            inject: true
+        })
+    ]
+
 }
