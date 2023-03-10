@@ -2,6 +2,7 @@ const path = require('path')
 
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const { VueLoaderPlugin } = require('vue-loader')
+const webpack = require('webpack')
 
 module.exports = {
     // 打包入口文件
@@ -30,6 +31,7 @@ module.exports = {
             inject: true
         }),
         new VueLoaderPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
     ],
     mode: 'production',
 }

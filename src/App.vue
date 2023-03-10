@@ -7,7 +7,7 @@
 export default {
     data(){
         return {
-            text: '这是app.vue6111'
+            text: '这是app.vue333339999'
         }
     }
 }
