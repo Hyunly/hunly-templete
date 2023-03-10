@@ -1,13 +1,15 @@
 <template>
     <div class="">
-        <h1>这是APP.vue</h1>
+        <h1>{{ text }}</h1>
     </div>
 </template>
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator'
-@Component
-export default class App extends Vue {
-
+<script>
+export default {
+    data(){
+        return {
+            text: '这是app.vue6111'
+        }
+    }
 }
 </script>
 <style>
