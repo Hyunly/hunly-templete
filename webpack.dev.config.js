@@ -9,6 +9,7 @@ module.exports = {
         },
         compress: true, //是否启用gzip压缩
         port: 8000,
-        hot: true
+        hot: true,  // 启用热模块更新
     },
+    stats: 'errors-only'
 }

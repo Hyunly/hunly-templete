@@ -32,6 +32,7 @@ module.exports = {
         }),
         new VueLoaderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
+        
     ],
     mode: 'production',
 }
