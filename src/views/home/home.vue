@@ -4,10 +4,18 @@
     </div>
 </template>
 <script lang="ts">
-import { Vue, Prop } from 'vue-property-decorator'
+export default {
+    data(){
+        return {
 
-export default class Home extends Vue {
-    
+        }
+    },
+    props: {
+        text: {
+            type: 'string',
+            default: ''
+        }
+    }
 }
 </script>
 <style>

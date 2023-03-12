@@ -5,5 +5,5 @@ npm run start
 - 构建项目模板（基础版）✔
 - 本地启动项目 ✔   
 - 引入webpack ✔    
-- 支持装饰器写法
-- 支持TypeScript   
+- 支持装饰器写法 ❌ (因为配置原因，暂时先不使用装饰器写法)
+- 支持TypeScript   ❌ (因为配置原因，暂时先不使用TypeScript写法)
